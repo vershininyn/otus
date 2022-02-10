@@ -2,7 +2,6 @@ package dev.projects.otus.luckyticket;
 
 import dev.projects.otus.testsystem.ITask;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class LuckyTicket implements ITask {
@@ -16,13 +15,13 @@ public class LuckyTicket implements ITask {
                 || (outArgs.isEmpty())
                 || (outArgs.size() != 1)) throw new IllegalArgumentException("Unacceptable output args");
 
-        int ticketLength = 2 * Integer.parseInt(inArgs.get(0)), actualLuckyTicketCount = 0;
+        long ticketLength = 2 * Long.parseLong(inArgs.get(0)), actualLuckyTicketCount = 0;
 
         StringBuffer buffer = generateTicket(ticketLength, "0");
 
-        int endIndex = Integer.parseInt(generateTicket(ticketLength, "9").toString());
+        long endIndex = Long.parseLong(generateTicket(ticketLength, "9").toString());
 
-        for (int index = 0; index <= endIndex; index++) {
+        for (long index = 0; index <= endIndex; index++) {
            if (isLuckyTicket(buffer)) {
                actualLuckyTicketCount++;
            }
@@ -30,22 +29,22 @@ public class LuckyTicket implements ITask {
             buffer = incrementBufferByOne(buffer, ticketLength);
         }
 
-        int correctLuckyTicketCount = Integer.parseInt(outArgs.get(0));
+        long correctLuckyTicketCount = Long.parseLong(outArgs.get(0));
 
         return actualLuckyTicketCount == correctLuckyTicketCount;
     }
 
-    private StringBuffer incrementBufferByOne(StringBuffer buffer, int ticketLength) {
-        int newValue = Integer.parseInt(buffer.toString()) + 1;
+    private StringBuffer incrementBufferByOne(StringBuffer buffer, long ticketLength) {
+        long newValue = Long.parseLong(buffer.toString()) + 1;
         String tempBuffer = String.valueOf(newValue);
 
         return generateTicket(ticketLength - tempBuffer.length(), "0").append(tempBuffer);
     }
 
-    private StringBuffer generateTicket(int ticketSize, String element) {
+    private StringBuffer generateTicket(long ticketSize, String element) {
         StringBuffer buffer = new StringBuffer();
 
-        for (int index = 0; index < ticketSize; index++) {
+        for (long index = 0; index < ticketSize; index++) {
             buffer.append(element);
         }
 
