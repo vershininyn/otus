@@ -7,14 +7,6 @@ import java.util.List;
 public class LuckyTicket implements ITask {
     @Override
     public boolean run(List<String> inArgs, List<String> outArgs) {
-        if ((inArgs == null)
-                || (inArgs.isEmpty())
-                || (inArgs.size() != 1)) throw new IllegalArgumentException("Unacceptable input args");
-
-        if ((outArgs == null)
-                || (outArgs.isEmpty())
-                || (outArgs.size() != 1)) throw new IllegalArgumentException("Unacceptable output args");
-
         long ticketLength = 2 * Long.parseLong(inArgs.get(0)), actualLuckyTicketCount = 0;
 
         StringBuffer buffer = generateTicket(ticketLength, "0");
@@ -62,5 +54,15 @@ public class LuckyTicket implements ITask {
         }
 
         return firstSum == secondSum;
+    }
+
+    @Override
+    public int getInputArgumentSize() {
+        return 1;
+    }
+
+    @Override
+    public int getOutputArgumentSize() {
+        return 1;
     }
 }

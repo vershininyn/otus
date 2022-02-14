@@ -5,17 +5,9 @@ import dev.projects.otus.testsystem.ITask;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PowerOf2MultiplicationNumberExp implements ITask {
+public class PowerOf2MultiplicationNumberExp extends AbstractNumberExp implements ITask {
     @Override
     public boolean run(List<String> inArgs, List<String> outArgs) {
-        if ((inArgs == null)
-                || (inArgs.isEmpty())
-                || (inArgs.size() != 2)) throw new IllegalArgumentException("Unacceptable input args");
-
-        if ((outArgs == null)
-                || (outArgs.isEmpty())
-                || (outArgs.size() != 1)) throw new IllegalArgumentException("Unacceptable output args");
-
         double number = Double.parseDouble(inArgs.get(0)), numberPower = 1L;
         long exp = Long.parseLong(inArgs.get(1));
 

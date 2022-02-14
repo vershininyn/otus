@@ -37,6 +37,14 @@ public class TestSystem {
                 List<String> inArgs = inReader.lines().collect(Collectors.toList()),
                         outArgs = outReader.lines().collect(Collectors.toList());
 
+                if ((inArgs == null)
+                        || (inArgs.isEmpty())
+                        || (inArgs.size() != task.getInputArgumentSize())) throw new IllegalArgumentException("Unacceptable input args");
+
+                if ((outArgs == null)
+                        || (outArgs.isEmpty())
+                        || (outArgs.size() != task.getOutputArgumentSize())) throw new IllegalArgumentException("Unacceptable output args");
+
                 boolean result = task.run(inArgs, outArgs);
 
                 System.out.println("Task["+fileCounter+"] = " + result);
@@ -47,5 +55,4 @@ public class TestSystem {
 
         System.out.println("<<< ---------- >>>");
     }
-
 }
