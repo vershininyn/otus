@@ -20,6 +20,8 @@ public class TestSystem {
 
         String pathToTestDirectory = directory.getAbsolutePath();
 
+        System.out.println("<<< ---------- >>>");
+
         while (true) {
             Path inFilePath = Path.of(pathToTestDirectory + File.separator + "test." + fileCounter + ".in"),
                     outFilePath = Path.of(pathToTestDirectory + File.separator + "test." + fileCounter + ".out");
@@ -42,6 +44,8 @@ public class TestSystem {
 
             fileCounter++;
         }
+
+        System.out.println("<<< ---------- >>>");
     }
 
 }
