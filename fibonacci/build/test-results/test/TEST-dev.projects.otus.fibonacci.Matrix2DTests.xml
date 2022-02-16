@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.projects.otus.fibonacci.Matrix2DTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-16T11:03:24" hostname="vyn-ubuntu" time="0.014">
+  <properties/>
+  <testcase name="matrix2DTests()" classname="dev.projects.otus.fibonacci.Matrix2DTests" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
