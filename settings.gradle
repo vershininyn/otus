@@ -3,4 +3,6 @@ include 'test-system'
 include 'luckyticket'
 include 'numberexp'
 include 'fibonacci'
+include 'primes'
+include 'bits'
 
