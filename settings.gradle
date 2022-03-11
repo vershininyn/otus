@@ -5,4 +5,5 @@ include 'numberexp'
 include 'fibonacci'
 include 'primes'
 include 'bits'
+include 'dynamicarray'
 

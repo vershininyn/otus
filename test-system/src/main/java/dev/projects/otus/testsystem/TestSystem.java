@@ -45,9 +45,11 @@ public class TestSystem {
                         || (outArgs.isEmpty())
                         || (outArgs.size() != task.getOutputArgumentSize())) throw new IllegalArgumentException("Unacceptable output args");
 
+                long startTime = System.currentTimeMillis();
                 boolean result = task.run(inArgs, outArgs);
+                long endTime = System.currentTimeMillis();
 
-                System.out.println("Task["+fileCounter+"] = " + result);
+                System.out.println("Task["+fileCounter+"]= " + result + ",time= "+(endTime - startTime) + "ms");
             }
 
             fileCounter++;
