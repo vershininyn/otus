@@ -6,4 +6,5 @@ include 'fibonacci'
 include 'primes'
 include 'bits'
 include 'dynamicarray'
+include 'simplesort'
 
