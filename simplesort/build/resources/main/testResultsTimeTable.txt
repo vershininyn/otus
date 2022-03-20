@@ -1,6 +1,6 @@
-                    |   100 1000 10000 100000 1000000
-bubbleSort-mod      |
-insertionsSort      |
-shellSort - 2^k     |
-shellsort - 2^(k+1) |
-shellsort - max     |
+alg/ms              |100    |1000   |10000      |100000     |1000000
+bubbleSort-mod      |2ms    |6ms    |121ms      |12355ms    |1267388ms
+insertionsSort      |1ms    |3ms    |34ms       |3175ms     |323659ms
+shellSort - 2^k     |2ms    |3ms    |4ms        |17ms       |194ms
+shellsort - 2^(k+1) |1ms    |1ms    |2ms        |17ms       |221ms
+shellsort - max     |1ms    |1ms    |2ms        |12ms       |171ms
