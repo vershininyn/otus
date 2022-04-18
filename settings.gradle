@@ -8,4 +8,5 @@ include 'bits'
 include 'dynamicarray'
 include 'simplesort'
 include 'pyramidsorting'
+include 'quickandmergesort'
 

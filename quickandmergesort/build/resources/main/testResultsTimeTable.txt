@@ -1,0 +1,4 @@
+alg/ms              |100    |1000   |10000      |100000     |1000000
+quicksort-lumoto    |1ms    |2ms    |6ms        |18ms       |108ms
+quicksort-hoare     |1ms    |2ms    |3ms        |10ms       |89ms
+mergesort           |1ms    |2ms    |3ms        |19ms       |176ms
