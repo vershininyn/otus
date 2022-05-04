@@ -1,0 +1,6 @@
+alg/ms              |100000
+mergesort           |48ms
+shellsort           |35ms
+countingsort        |3ms
+bucketsort          |182ms
+radixsort           |9ms

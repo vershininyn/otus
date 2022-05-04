@@ -1,0 +1,6 @@
+alg/ms              |100000
+mergesort           |
+shellsort           |
+countingsort        |
+bucketsort          |
+radixsort           |
